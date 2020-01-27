@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="back_div">
+
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+        </div>
+        <!-- Блок який стає видимим при нажиманні кнопки add -->
+        <div id="ndsp_choice" class="back_div">
+            <h2>Choose what you want:</h2>
+            <input type="radio" name="choice" id="tb">
+            <label for="tb">table</label>
+            <input type="radio" name="choice" id="lst">
+            <label for="lst">list</label>
+            <!-- Форма для створення таблиці -->
+            <form action="" name="table_frm" id="f1">
+                <label for="ct1" class=" fr_label">Count TR:</label>
+                <input type="text" class="ch_inp textfield" id="ct1" placeholder="Count TR:" name="cht1">
+                <label for="ct2" class=" fr_label">Count TD:</label>
+                <input type="text" class="ch_inp textfield" id="ct2" placeholder="Count TD:" name="cht2">
+                <h3 class="choice_subhd">Add style to your table:</h3>
+                <label for="ct3" class=" fr_label">Width of TD:</label>
+                <input type="text" class="ch_inp textfield" id="ct3" placeholder="Width of TD:" name="cht3">
+                <label for="ct4" class=" fr_label">Height of TD:</label>
+                <input type="text" class="ch_inp textfield" id="ct4" placeholder="Heigth of TD:" name="cht4">
+                <label for="ct5" class=" fr_label">Width of border:</label>
+                <input type="text" class="textfield small_ch" id="ct5" placeholder="Width:" name="cht5">
+                <label for="ct6" class="fr_label">Type of border:</label>
+                <select name="sel_bordertype" id="ct6" class="textfield small_ch">
+                    <option value="solid">solid</option>
+                    <option value="double">double</option>
+                    <option value="dashed">dashed</option>
+                </select>
+                <label for="ct7" class="fr_label">Color of border:</label>
+                <select name="sel_bordercolor" id="ct7" class="textfield small_ch">
+                    <option value="red">red</option>
+                    <option value="blue">blue</option>
+                    <option value="purple">purple</option>
+                    <option value="yellow">yellow</option>
+                </select>
+                <input type="button" value="Create table" id="crt_table" name="createbtn" class="btn crt_btn">
+            </form>
+             <!-- Форма для створення списку li-->
+            <form action="" name="list_frm" id="f2">
+                <label for="lin1" class="fr_label">Count Li:</label>
+                <input type="text" class="textfield ch_inp" id="lin1" placeholder="Count Li:" name="lin1">
+                <label for="lin2" class="fr_label">Type of marks:</label>
+                <select name="sel_liststyle" id="lin3" class="textfield ch_inp">
+                    <option value="circle">circle</option>
+                    <option value="disc">disc</option>
+                    <option value="square">square</option>
+                </select>
+                <input type="button" value="Create list" id="crt_list" name="listbtn" class="btn crt_btn">
+            </form>
+        </div>
+        <div class="ed_st">
+            <button id="edit" class="btn">edit</button>
+            <button id="style" class="btn">style</button>
+        </div>
+        <div class="back_div">
+            <!-- Блок редагування тексту -->
+            <div class="dispn">
+                <textarea name="txtar" id="txtar"></textarea>
+
+                </textarea>
+                <button id="add" class="btn">add</button>
+                <button id="save" class="btn">save</button>
+            </div>
+            <!-- Блок налаштувань стилізації -->
+            <div id="styledisp">
+                <h3>Font Size:</h3>
+                <input type="radio" name="fs" id="fs1" value="12px">
+                <label for="fs1">12px</label>
+                <input type="radio" name="fs" id="fs2" value="14px">
+                <label for="fs2">14px</label>
+                <input type="radio" name="fs" id="fs3" value="16px">
+                <label for="fs3">16px</label>
+                <input type="radio" name="fs" id="fs4" value="18px">
+                <label for="fs4">18px</label>
+                <input type="radio" name="fs" id="fs5" value="20px">
+                <label for="fs5">20px</label>
+                <h3>Font Family:</h3>
+                <select name="selfont" class="textfield" id="">
+                    <option value="choose" disabled selected>Choose option</option>
+                    <option value="cursive">cursive</option>
+                    <option value="monospace">monospace</option>
+                    <option value="serif">serif</option>
+                    <option value="fantasy">fantasy</option>
+                </select>
+                <br>
+                <h3>Colors:</h3>
+                <button id="txtcolor" class="colbtn btn" onclick="changeColor()">Color of Text</button>
+                <button id="bgrcolor" class="colbtn btn" onclick="changeColor()">Background color</button>
+            <!-- Блок, який стає видимим при нажиманні на кнопки вибору кольору тексту або фона-->
+                <div class="colant">
+                    <div class="colors" style="background:red"></div>
+                    <div class="colors" style="background:white"></div>
+                    <div class="colors" style="background:black"></div>
+                    <div class="colors" style="background:blue"></div>
+                    <div class="colors" style="background:green"></div>
+                    <div class="colors" style="background:orange"></div>
+                    <div class="colors" style="background:yellow"></div>
+                    <div class="colors" style="background:purple"></div>
+                    <div class="colors" style="background:teal"></div>
+                </div>
+                <h3>Style:</h3>
+                <input type="checkbox" name="cb1" id="cb1">
+                <label for="cb1">Bold text</label>
+                <input type="checkbox" name="cb2" id="cb2">
+                <label for="cb2">Cursive text</label>
+
+
+            </div>
+        </div>
+
+    </div>
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>
